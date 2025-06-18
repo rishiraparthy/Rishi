@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rishi Teja | Portfolio</title>
-  <link rel="icon" href="Rishi.jpeg" type="image/png">
+  <link rel="icon" href="Rishi.jpeg" type="image/png" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #121212;
@@ -20,6 +24,7 @@
       right: 0;
       background: rgba(40, 40, 40, 0.95);
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 12px 20px;
@@ -32,12 +37,11 @@
       font-weight: bold;
       text-decoration: none;
     }
-    .logo:hover {
-      color: #636564;
-    }
     .nav-links {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
     }
     .nav-links a {
       color: #f6f8f8;
@@ -68,132 +72,154 @@
       color: #f1f1f1;
       margin-bottom: 20px;
       font-size: 1.8rem;
-    }
-    .project, .publication, .achievement {
-      margin-bottom: 20px;
-    }
-    footer {
       text-align: center;
-      padding: 20px;
-      background: #1c1c1c;
-      color: #999;
-      margin-top: 40px;
-      font-size: 0.9rem;
     }
     .intro-section {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
     }
     .intro-section img {
-      width: 100%;
-      max-width: 420px;
-      height: auto;
+      width: 90%;
+      max-width: 340px;
       border-radius: 25px;
       object-fit: cover;
       border: 4px solid #333;
     }
-    .intro-content { flex: 1; }
+    .intro-content {
+      flex: 1;
+      padding: 0 10px;
+    }
     .intro-heading {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #f8f8f2;
       margin-bottom: 20px;
     }
     .typewriter-text {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: #3a892c;
       font-weight: bold;
       min-height: 30px;
       margin-bottom: 20px;
     }
     .intro-description {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #ccc;
-      max-width: 600px;
       margin-bottom: 20px;
     }
-    .button-group {
+    .metrics-container {
       display: flex;
-      gap: 15px;
-    }
-    .button-group a {
-      display: inline-flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #1e1e1e;
-      border: 1px solid #444;
-      color: #8be9fd;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background 0.3s;
+      gap: 20px;
     }
-    .button-group a:hover {
-      background-color: #333;
-      color: #f1f1f1;
+    .metric {
+      text-align: center;
+      flex: 1 1 100px;
     }
-    .scroll-text {
-      position: relative;
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease;
+    .metric h3 {
+      font-size: 1.8rem;
+      color: #078364;
+      margin-bottom: 8px;
+    }
+    .metric p {
+      font-size: 0.85rem;
+      color: #aaa;
     }
     .skill-boxes {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
     }
     .skill-box {
       background-color: #1e1e1e;
-      padding: 15px 20px;
+      padding: 10px;
       border-radius: 10px;
       border: 1px solid #333;
-      color: #ddd;
     }
-    .metrics-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: nowrap;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.metric {
-  flex: 1;
-  min-width: 180px;
-}
-
-.metric h3 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #078364;
-  margin-bottom: 8px;
-  transition: color 0.3s;
-}
-
-.metric p {
-  font-size: 0.95rem;
-  color: #aaa;
-  max-width: 220px;
-  margin: auto;
-}
-
+    .skill-box input[type="range"] {
+      width: 100%;
+      accent-color: #50fa7b;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .project-item img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .contact-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #1c1c1c;
+    }
+    @media (max-width: 600px) {
+      .intro-heading {
+        font-size: 1.6rem;
+      }
+      .typewriter-text {
+        font-size: 1rem;
+      }
+    }
     @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+ @media (max-width: 768px) {
       nav { flex-direction: column; gap: 10px; }
       .intro-section { flex-direction: column; text-align: center; }
       .intro-section img { max-width: 300px; }
       .intro-heading { font-size: 2rem; }
       .typewriter-text { font-size: 1.1rem; }
     }
+    @media (max-width: 600px) {
+  .metrics-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .metric h3 {
+    font-size: 1.8rem;
+  }
+
+  .metric p {
+    font-size: 0.9rem;
+  }
+}
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -213,7 +239,14 @@
 
     </div>
   </nav>
+ <script>
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
 
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <section id="home">
     <div class="intro-section">
       <div style="flex: 1; display: flex; justify-content: center;">
