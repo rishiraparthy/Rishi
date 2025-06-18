@@ -83,8 +83,9 @@
       text-align: center;
     }
     .intro-section img {
-      width: 90%;
-      max-width: 340px;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
       border-radius: 25px;
       object-fit: cover;
       border: 4px solid #333;
@@ -220,6 +221,23 @@
     font-size: 0.9rem;
   }
 }
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -253,12 +271,14 @@
         <img src="Rishi.jpeg" alt="Rishi Teja">
       </div>
       <div class="intro-content" style="flex: 1; padding: 20px;">
-        <div class="intro-heading">Hi, I am Rishi Teja.</div>
+        <div class="intro-heading">Hi, I am Rishi Teja <span class="wave">👋🏻</span>
+      </div>
         <div class="typewriter-text">
           <div id="typed-text" class="scroll-text">Data Analyst</div>
         </div>
         <div class="intro-description">
           I'm a data-driven problem solver with a machine learning obsession. With over 3 years of experience across finance, emergency response, and enterprise systems, I've built fraud models, forecasted 911 calls, and optimized real-time pipelines. I love turning messy data into clean, actionable insights.
+        <br> 🏆 Smart India Hackathon Winner |🥇 Databricks Machine Learning Certified | Google Certfied Data Analyst | IEEE Member
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
           <div class="metrics-container">
@@ -477,10 +497,11 @@
     <h2>Projects</h2>
     <div class="project-gallery">
       <a href="https://github.com/rishiraparthy/" class="project-item" target="_blank">
-        <img src="churn.jpeg" alt="Accent Coach">
+        <img src="churn.jpeg" alt="Fraud Detection in Financial Transactions">
         <div class="project-overlay">
-          <h3>Customer Churn Prediction</h3>
-          <p>Predicted banking customer churn using XGBoost on 1M+ records and deployed real-time retention dashboard via Power BI and AWS Lambda.</p>
+          <h3>Fraud Detection in Financial Transactions</h3>
+          <p>Developed a fraud detection model using Random Forest and XGBoost on 10M+ transaction records, achieving 92% accuracy in
+identifying suspicious activity through behavioral pattern analysis.</p>
           </div>
       </a>
       <a href="https://github.com/rishiraparthy/" class="project-item" target="_blank">
@@ -490,6 +511,20 @@
           <p>Predicted 911 call volume using time series models, optimizing emergency response and resource planning.</p>
         </div>
       </a>
+    <a href="https://public.tableau.com/app/profile/rishi.teja6637/viz/Grail_17416689504360/Dashboard2" class="project-item" target="_blank">
+      <img src="dash.jpeg" alt="Emergency Forecasting Dashboard" style="width:100%; max-width:600px; border-radius:10px;">
+      <div class="project-overlay">
+        <h3>Grail Data Dashboard</h3>
+        <p>Interactive visualization designed for deep-diving into operational metrics and insights. Built with dynamic filters and drilldowns for real-time business intelligence.</p>
+      </div>
+    </a>
+    <a href="https://github.com/rishiraparthy/CrowdAnalysis" class="project-item" target="_blank">
+      <img src="crowd.jpeg" alt="Crowd Analysis" style="width:100%; max-width:600px; border-radius:10px;">
+      <div class="project-overlay">
+        <h3>Crowd Emotion Analysis</h3>
+        <p>Used computer vision and facial expression recognition to detect emotions in a crowd and assess the overall mood.</p>
+      </div>
+    </a>
     </div>
   </section>
   
@@ -563,7 +598,7 @@
   <p class="contact-subtext">From ML-powered fraud detection to time-series forecasting, I’m open to projects that push boundaries and deliver real-world value.
     Got something exciting? Let’s build it together.</p>
   
-  <a href="mailto:raparthyrishi13@gmail.com?subject=Let's Work Together&body=Hi Harika," class="contact-button">Send Me an Email</a>
+  <a href="mailto:raparthyrishi13@gmail.com?subject=Let's Work Together&body=Hi Rishi," class="contact-button">Send Me an Email</a>
 
   <div class="button-group" style="display: flex; justify-content: center; gap: 15px; padding: 1cm;">
     <a href="https://www.linkedin.com/in/rishiraparthy/" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
@@ -652,7 +687,7 @@
   </footer>
 
   <script>
-    const phrases = ["Data Analyst", "Data Scientist", "Research Engineer"];
+    const phrases = ["Data Analyst", "Machine Learning Engineer"];
     let index = 0;
     const typedText = document.getElementById("typed-text");
 
