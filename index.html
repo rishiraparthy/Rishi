@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishi Teja | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(40, 40, 40, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .logo {
+      color: #f6f8f8;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .logo:hover {
+      color: #636564;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: #f6f8f8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      position: relative;
+    }
+    .nav-links a::after, .logo::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background-color: #636564;
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after, .logo:hover::after {
+      width: 100%;
+    }
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #f1f1f1;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    .project, .publication, .achievement {
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1c1c1c;
+      color: #999;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .intro-section img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 25px;
+      object-fit: cover;
+      border: 4px solid #333;
+    }
+    .intro-content { flex: 1; }
+    .intro-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f8f8f2;
+      margin-bottom: 20px;
+    }
+    .typewriter-text {
+      font-size: 1.4rem;
+      color: #3a892c;
+      font-weight: bold;
+      min-height: 30px;
+      margin-bottom: 20px;
+    }
+    .intro-description {
+      font-size: 1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+    .button-group {
+      display: flex;
+      gap: 15px;
+    }
+    .button-group a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      color: #8be9fd;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .button-group a:hover {
+      background-color: #333;
+      color: #f1f1f1;
+    }
+    .scroll-text {
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+    .skill-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .skill-box {
+      background-color: #1e1e1e;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      color: #ddd;
+    }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 10px; }
+      .intro-section { flex-direction: column; text-align: center; }
+      .intro-section img { max-width: 300px; }
+      .intro-heading { font-size: 2rem; }
+      .typewriter-text { font-size: 1.1rem; }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <nav>
+    <a href="#home" class="logo">Rishi Teja</a>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#accomplishments">Accomplishments</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="intro-section">
+      <div style="flex: 1; display: flex; justify-content: center;">
+        <img src="Rishi.jpeg" alt="Rishi Teja">
+      </div>
+      <div class="intro-content" style="flex: 1; padding: 20px;">
+        <div class="intro-heading">Hi, I am Rishi Teja.</div>
+        <div class="typewriter-text">
+          <div id="typed-text" class="scroll-text">Data Analyst</div>
+        </div>
+        <div class="intro-description">
+          I'm a data-driven problem solver with a machine learning obsession. With over 3 years of experience across finance, emergency response, and enterprise systems, I've built fraud models, forecasted 911 calls, and optimized real-time pipelines. I love turning messy data into clean, actionable insights.
+        </div>
+        <div class="button-group" style="display: flex; gap: 15px;">
+          <a href="https://www.linkedin.com/in/rishiraparthy/" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt="LinkedIn" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+          </a>
+          <a href="https://github.com/rishiraparthy" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+          </a>
+          <a href="mailto:raparthyrishi13@gmail.com" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+          </a>
+        </div>
+        
+        <style>
+          .button-group a:hover {
+            background-color: #111 !important;
+            border-color: #999 !important;
+          }
+          .button-group a:hover img {
+            filter: brightness(0.7) invert(1) !important;
+          }
+        </style>
+        
+        <!-- Ensure Font Awesome is loaded -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-boxes">
+      <div class="skill-box">
+        <strong>Languages</strong>
+        <div>Python <input type="range" min="0" max="100" value="95" disabled></div>
+        <div>SQL <input type="range" min="0" max="100" value="90" disabled></div>
+        <div>R <input type="range" min="0" max="100" value="70" disabled></div>
+      </div>
+      <div class="skill-box">
+        <strong>Tools</strong>
+        <div>Tableau <input type="range" min="0" max="100" value="85" disabled></div>
+        <div>Power BI <input type="range" min="0" max="100" value="80" disabled></div>
+        <div>Airflow <input type="range" min="0" max="100" value="75" disabled></div>
+        <div>Git <input type="range" min="0" max="100" value="90" disabled></div>
+        <div>Docker <input type="range" min="0" max="100" value="70" disabled></div>
+      </div>
+      <div class="skill-box">
+        <strong>Databases</strong>
+        <div>PostgreSQL <input type="range" min="0" max="100" value="85" disabled></div>
+        <div>MySQL <input type="range" min="0" max="100" value="80" disabled></div>
+        <div>MongoDB <input type="range" min="0" max="100" value="75" disabled></div>
+        <div>Redshift <input type="range" min="0" max="100" value="70" disabled></div>
+      </div>
+      <div class="skill-box">
+        <strong>Machine Learning</strong>
+        <div>Scikit-learn <input type="range" min="0" max="100" value="90" disabled></div>
+        <div>XGBoost <input type="range" min="0" max="100" value="85" disabled></div>
+        <div>NLP <input type="range" min="0" max="100" value="80" disabled></div>
+        <div>Time Series <input type="range" min="0" max="100" value="75" disabled></div>
+      </div>
+      <div class="skill-box">
+        <strong>Cloud</strong>
+        <div>AWS <input type="range" min="0" max="100" value="80" disabled></div>
+        <div>GCP <input type="range" min="0" max="100" value="70" disabled></div>
+        <div>Azure <input type="range" min="0" max="100" value="65" disabled></div>
+        <div>Databricks <input type="range" min="0" max="100" value="75" disabled></div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .skill-box input[type="range"] {
+      width: 100%;
+      margin-top: 4px;
+      accent-color: #50fa7b;
+    }
+    .skill-box div {
+      margin-bottom: 10px;
+    }
+  </style>
+  
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="https://your-resume-link.com" target="_blank">Click here to view my resume</a></p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <strong>Accent Coach</strong>
+      <p>Built an NLP feedback system to help users improve pronunciation through real-time analysis.</p>
+    </div>
+    <div class="project">
+      <strong>Emergency Call Forecasting</strong>
+      <p>Predicted 911 call volume using time series models, optimizing emergency response and resource planning.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="publication">
+      <strong>Beyond Classical</strong>
+      <p>Self-published quantum computing crash course using Qiskit and IBM Q.</p>
+    </div>
+    <div class="publication">
+      <strong>ICCCES 2022</strong>
+      <p>Paper on COPD patient identification from health records and demographic data.</p>
+    </div>
+  </section>
+
+  <section id="accomplishments">
+    <h2>Accomplishments</h2>
+    <div class="achievement">
+      <p>🏆 Winner - Smart India Hackathon: Built a lie detection system using TDNN and NLP.</p>
+    </div>
+    <div class="achievement">
+      <p>🎓 Google DSC Lead and Microsoft Student Partner: Mentored 1000+ students in AI/ML fundamentals.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Rishi Teja | Contact: raparthyrishi13@gmail.com</p>
+  </footer>
+
+  <script>
+    const phrases = ["Data Analyst", "Data Scientist", "Research Engineer"];
+    let index = 0;
+    const typedText = document.getElementById("typed-text");
+
+    function showPhrase() {
+      typedText.style.opacity = 0;
+      typedText.style.transform = "translateY(-20px)";
+
+      setTimeout(() => {
+        typedText.textContent = phrases[index];
+        typedText.style.opacity = 1;
+        typedText.style.transform = "translateY(0)";
+        index = (index + 1) % phrases.length;
+      }, 300);
+    }
+
+    showPhrase();
+    setInterval(showPhrase, 2000);
+  </script>
+</body>
+</html>
