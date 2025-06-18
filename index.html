@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rishi Teja | Portfolio</title>
+  <link rel="icon" href="Rishi.jpeg" type="image/png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -155,6 +156,37 @@
       border: 1px solid #333;
       color: #ddd;
     }
+    .metrics-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: nowrap;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.metric {
+  flex: 1;
+  min-width: 180px;
+}
+
+.metric h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #078364;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.metric p {
+  font-size: 0.95rem;
+  color: #aaa;
+  max-width: 220px;
+  margin: auto;
+}
+
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 10px; }
       .intro-section { flex-direction: column; text-align: center; }
@@ -171,11 +203,14 @@
   <nav>
     <a href="#home" class="logo">Rishi Teja</a>
     <div class="nav-links">
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
       <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#accomplishments">Accomplishments</a>
+      <a href="https://docs.google.com/document/d/1lcNs-ye48m00KIQHpyiVT-21kYqPnZRtiEFcHj06o9g/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+        Resume
+      </a>
+      <a href="#contact">ContactMe</a>
+
     </div>
   </nav>
 
@@ -192,35 +227,167 @@
         <div class="intro-description">
           I'm a data-driven problem solver with a machine learning obsession. With over 3 years of experience across finance, emergency response, and enterprise systems, I've built fraud models, forecasted 911 calls, and optimized real-time pipelines. I love turning messy data into clean, actionable insights.
         </div>
-        <div class="button-group" style="display: flex; gap: 15px;">
-          <a href="https://www.linkedin.com/in/rishiraparthy/" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt="LinkedIn" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
-          </a>
-          <a href="https://github.com/rishiraparthy" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
-          </a>
-          <a href="mailto:raparthyrishi13@gmail.com" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
-          </a>
-        </div>
-        
-        <style>
-          .button-group a:hover {
-            background-color: #111 !important;
-            border-color: #999 !important;
-          }
-          .button-group a:hover img {
-            filter: brightness(0.7) invert(1) !important;
-          }
-        </style>
-        
-        <!-- Ensure Font Awesome is loaded -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vWq1K3J0AEaW+o6kAAO7M3rNZBc7QK6E+MkFsIDTVKxzZmBjWakIQSN8CtQwE3sRC2PiHHTR8J2p0gktWgAA1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+          <div class="metrics-container">
+            <div class="metric">
+              <h3><span class="count" data-target="50">0</span>M+</h3>
+              <p>Records Transformed</p>
+            </div>
+            <div class="metric">
+              <h3><span class="count" data-target="20">0</span>%</h3>
+              <p>Fraud Detection Boost </p>
+            </div>
+            <div class="metric">
+              <h3><span class="count" data-target="15">0</span>%</h3>
+              <p>Dispatch Delay Reduction</p>
+            </div>
+          </div>
+          
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="experience">
+    <h2>Experience & Education Timeline</h2>
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item right long">
+        <div class="content">
+          <h3>JP Morgan Chase & Co. – Data Analyst</h3>
+          <span>Aug 2024 – Present</span>
+          <p>Led analytics across operations & compliance. Improved fraud detection by 20% with ML models and automated Tableau pipelines for real-time insights across 50M+ records.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left long">
+        <div class="content">
+          <h3>Indiana University – MS in Informatics</h3>
+          <span>Jan 2023 – Dec 2024</span>
+          <p>Major in Applied Data Science with coursework in Deep Learning, Cloud Computing, and Big Data Analytics. CGPA: 3.7/4.0</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right long">
+        <div class="content">
+          <h3>Indiana University Redlabs – Data Analyst</h3>
+          <span>Jan 2023 – Jul 2024</span>
+          <p>Reduced EMS dispatch delays by 15% via predictive routing. Built NLP pipelines and Power BI dashboards for multi-department decision support at Indiana Military Center.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Tata Consultancy Services – Data Analyst</h3>
+          <span>Dec 2021 – Dec 2022</span>
+          <p>Automated reporting and NLP sentiment analysis for banking clients. Enabled 3x faster ticket resolution and saved 10+ hours/week on Salesforce insights.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Vedanta – Technical Data Analyst</h3>
+          <span>Jul 2021 – Dec 2021</span>
+          <p>Reduced downtime losses by 10% through MongoDB-based IoT sensor analysis. Created executive dashboards for manufacturing KPIs.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left long">
+        <div class="content">
+          <h3>JNTU – B.Tech in Mechanical Engineering</h3>
+          <span>Jul 2017 – Jul 2021</span>
+          <p>Built foundations in programming, databases, and distributed systems. Developed engineering mindset and software adaptability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .timeline-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px 0;
+    }
+    .timeline-line {
+      position: absolute;
+      width: 4px;
+      background: #666;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-item {
+      padding: 20px;
+      width: 50%;
+      position: relative;
+    }
+    .timeline-item.long .content {
+      min-height: 140px;
+    }
+    .timeline-item .content {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      color: #eee;
+    }
+    .timeline-item h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+    .timeline-item span {
+      font-size: 0.9rem;
+      color: #bbb;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item.right {
+      left: 50%;
+    }
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #999;
+      border: 2px solid #fff;
+      z-index: 1;
+    }
+    .timeline-item.left::before {
+      right: -10px;
+    }
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+  
+    @media (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        text-align: left !important;
+        padding-left: 30px;
+      }
+      .timeline-line {
+        left: 20px;
+      }
+      .timeline-item.left, .timeline-item.right {
+        left: 0;
+      }
+      .timeline-item.left::before, .timeline-item.right::before {
+        left: 0;
+      }
+    }
+
+  </style>
   <section id="skills">
     <h2>Skills</h2>
     <div class="skill-boxes">
@@ -272,47 +439,181 @@
       margin-bottom: 10px;
     }
   </style>
-  
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="https://your-resume-link.com" target="_blank">Click here to view my resume</a></p>
-  </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <strong>Accent Coach</strong>
-      <p>Built an NLP feedback system to help users improve pronunciation through real-time analysis.</p>
-    </div>
-    <div class="project">
-      <strong>Emergency Call Forecasting</strong>
-      <p>Predicted 911 call volume using time series models, optimizing emergency response and resource planning.</p>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="publication">
-      <strong>Beyond Classical</strong>
-      <p>Self-published quantum computing crash course using Qiskit and IBM Q.</p>
-    </div>
-    <div class="publication">
-      <strong>ICCCES 2022</strong>
-      <p>Paper on COPD patient identification from health records and demographic data.</p>
+    <div class="project-gallery">
+      <a href="https://github.com/rishiraparthy/" class="project-item" target="_blank">
+        <img src="churn.jpeg" alt="Accent Coach">
+        <div class="project-overlay">
+          <h3>Customer Churn Prediction</h3>
+          <p>Predicted banking customer churn using XGBoost on 1M+ records and deployed real-time retention dashboard via Power BI and AWS Lambda.</p>
+          </div>
+      </a>
+      <a href="https://github.com/rishiraparthy/" class="project-item" target="_blank">
+        <img src="emer.jpeg" alt="Emergency Forecasting">
+        <div class="project-overlay">
+          <h3>Emergency Call Forecasting</h3>
+          <p>Predicted 911 call volume using time series models, optimizing emergency response and resource planning.</p>
+        </div>
+      </a>
     </div>
   </section>
+  
+  <style>
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+  
+    .project-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid #333;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+  
+    .project-item:hover {
+      transform: scale(1.02);
+    }
+  
+    .project-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+  
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(15, 15, 15, 0.85);
+      color: #eaeaea;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 0.4s ease;
+    }
+  
+    .project-item:hover .project-overlay {
+      opacity: 1;
+    }
+  
+    .project-overlay h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #50fa7b;
+    }
+  
+    .project-overlay p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
 
-  <section id="accomplishments">
-    <h2>Accomplishments</h2>
-    <div class="achievement">
-      <p>🏆 Winner - Smart India Hackathon: Built a lie detection system using TDNN and NLP.</p>
-    </div>
-    <div class="achievement">
-      <p>🎓 Google DSC Lead and Microsoft Student Partner: Mentored 1000+ students in AI/ML fundamentals.</p>
-    </div>
-  </section>
 
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">Let’s Build Data-Driven Solutions That Matter</h2>
+  <p class="contact-subtext">From ML-powered fraud detection to time-series forecasting, I’m open to projects that push boundaries and deliver real-world value.
+    Got something exciting? Let’s build it together.</p>
+  
+  <a href="mailto:raparthyrishi13@gmail.com?subject=Let's Work Together&body=Hi Harika," class="contact-button">Send Me an Email</a>
+
+  <div class="button-group" style="display: flex; justify-content: center; gap: 15px; padding: 1cm;">
+    <a href="https://www.linkedin.com/in/rishiraparthy/" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt="LinkedIn" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+    </a>
+    <a href="https://github.com/rishiraparthy" target="_blank" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+    </a>
+    <a href="mailto:raparthyrishi13@gmail.com" style="width: 50px; height: 50px; border-radius: 12px; background-color: #000; display: flex; align-items: center; justify-content: center; border: 1px solid #666; transition: background-color 0.3s, border-color 0.3s;">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" width="28" height="28" style="filter: brightness(0) invert(1); transition: filter 0.3s;">
+    </a>
+  </div>
+  
+  <style>
+    .button-group a:hover {
+      background-color: #111 !important;
+      border-color: #999 !important;
+    }
+    .button-group a:hover img {
+      filter: brightness(0.7) invert(1) !important;
+    }
+  </style>
+</section>
+<style>
+  .contact-section {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: #111;
+    color: #eee;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .contact-subtext {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #8e1f1f;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(255, 50, 50, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #aa2b2b;
+  }
+  
+  .contact-socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contact-socials a {
+    color: #ccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-socials a:hover {
+    color: #fff;
+  }
+  </style>
+    
+
+  
   <footer>
     <p>© 2025 Rishi Teja | Contact: raparthyrishi13@gmail.com</p>
   </footer>
@@ -336,6 +637,28 @@
 
     showPhrase();
     setInterval(showPhrase, 2000);
+  </script>
+  <script>
+    const counters = document.querySelectorAll(".count");
+    const duration = 3000; // Total animation time in ms
+  
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const increment = target / (duration / 30); // slower steps
+  
+      const update = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = (Math.round(count * 10) / 10).toFixed(1);
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target.toString().includes('.') ? target.toFixed(1) : target.toLocaleString();
+        }
+      };
+  
+      update();
+    });
   </script>
 </body>
 </html>
